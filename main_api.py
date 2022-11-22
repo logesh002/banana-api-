@@ -16,7 +16,7 @@ origins = [
     "http://localhost",
     "http://localhost:3000",
     "https://aquamarine-valkyrie-4f96dc.netlify.app",
-    "https://wonderful-wisp-52796a.netlify.app",
+    "https://astonishing-quokka-246291.netlify.app/",
 ]
 app.add_middleware(
     CORSMiddleware,
