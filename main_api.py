@@ -13,7 +13,7 @@ app=FastAPI()
 
 
 origins = [
-    "http://localhost",
+    
     "http://localhost:3000",
     "https://aquamarine-valkyrie-4f96dc.netlify.app",
     "https://astonishing-quokka-246291.netlify.app/",
