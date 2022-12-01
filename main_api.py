@@ -18,6 +18,7 @@ origins = [
     "https://aquamarine-valkyrie-4f96dc.netlify.app",
     "https://astonishing-quokka-246291.netlify.app/",
     "https://astonishing-quokka-246291.netlify.app",
+    "https://silly-cactus-ed7ff8.netlify.app",
 ]
 app.add_middleware(
     CORSMiddleware,
