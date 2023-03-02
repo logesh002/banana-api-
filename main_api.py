@@ -28,7 +28,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL =tf.keras.models.load_model("models/Bananamodel3")
+MODEL =tf.keras.models.load_model("models/Bananamodel3.h5")
 ENDPOINT="http://localhost:8601/v1/models/banana:predict"
 CLASS_NAMES =['NotBanana','cordana', 'healthy', 'pestalotiopsis', 'sigatoka']
 
