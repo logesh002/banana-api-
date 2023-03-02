@@ -28,14 +28,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL =tf.keras.models.load_model("models/2")
+MODEL =tf.keras.models.load_model("models/Bananamodel3")
 ENDPOINT="http://localhost:8601/v1/models/banana:predict"
-CLASS_NAMES =['cordana', 'healthy', 'pestalotiopsis', 'sigatoka']
+CLASS_NAMES =['NotBanana','cordana', 'healthy', 'pestalotiopsis', 'sigatoka']
 
 def read_file_as_image(data)->np.array:
     img_path=Image.open(BytesIO(data))
-    #img = image.load_img(BytesIO(data), target_size=(224, 224))
-    img = image.load_img(BytesIO(data), target_size=(256, 256))
+    img = image.load_img(BytesIO(data), target_size=(224, 224))
+    #img = image.load_img(BytesIO(data), target_size=(256, 256))
     img_array=image.img_to_array(img)
     return img_array
 
