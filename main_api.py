@@ -28,7 +28,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL =tf.keras.models.load_model("models/Bananamodel3.h5")
+MODEL =tf.keras.models.load_model("models/Bananamodel3.h5",compile=False)
+MODEL.compile(
+    loss = 'categorical_crossentropy',
+    optimizer = tf.keras.optimizers.Adam(),
+    metrics = ['accuracy']
+)
 ENDPOINT="http://localhost:8601/v1/models/banana:predict"
 CLASS_NAMES =['NotBanana','cordana', 'healthy', 'pestalotiopsis', 'sigatoka']
 
